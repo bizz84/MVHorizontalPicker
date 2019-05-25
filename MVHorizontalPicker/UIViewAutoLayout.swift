@@ -25,11 +25,11 @@ extension UIView {
                 ])
         }
     }
-    func makeEqualityConstraint(attribute: NSLayoutAttribute, toView view: UIView) -> NSLayoutConstraint {
+    func makeEqualityConstraint(attribute: NSLayoutConstraint.Attribute, toView view: UIView) -> NSLayoutConstraint {
         
         return makeConstraint(attribute: attribute, toView: view, constant: 0)
     }
-    func makeConstraint(attribute: NSLayoutAttribute, toView view: UIView?, constant: CGFloat) -> NSLayoutConstraint {
+    func makeConstraint(attribute: NSLayoutConstraint.Attribute, toView view: UIView?, constant: CGFloat) -> NSLayoutConstraint {
         
         return NSLayoutConstraint(item: self, attribute: attribute, relatedBy: .equal,
             toItem: view, attribute: attribute, multiplier: 1, constant: constant)
